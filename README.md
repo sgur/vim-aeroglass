@@ -14,13 +14,13 @@ Visual C++ Runtime for Visual Studio 2012
 Usage
 -----
 
-### Enable Aero Glass Effect
+### Enable
 
 `:AeroGlassEnable`
 
-### Disable Aero Glass Effect
+### Disable
 
 `:AeroGlassDisable`
 
-### Toggle Aero Glass Effect
+### Toggle
 `:AeroGlassToggle`
