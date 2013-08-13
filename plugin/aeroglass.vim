@@ -23,7 +23,7 @@
 " }}}
 "=============================================================================
 
-if exists('g:loaded_aeroglass') && g:loaded_aeroglass
+if exists('g:loaded_aeroglass') && g:loaded_aeroglass && !(has('win32') || has('win64'))
   finish
 endif
 let g:loaded_aeroglass = 1
