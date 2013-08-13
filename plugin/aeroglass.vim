@@ -28,7 +28,16 @@ if exists('g:loaded_aeroglass') && g:loaded_aeroglass && !(has('win32') || has('
 endif
 let g:loaded_aeroglass = 1
 
+let g:aeroglass_auto_start = get(g:, 'aeroglass_auto_start', 0)
+
 command! -nargs=0 AeroGlassEnable  call aeroglass#enable()
 command! -nargs=0 AeroGlassDisable  call aeroglass#disable()
 command! -nargs=0 AeroGlassToggle  call aeroglass#toggle()
+
+if g:aeroglass_auto_start
+  augroup aeroglass_auto_start
+    autocmd!
+    autocmd GuiEnter *  AeroGlassEnable
+  augroup END
+endif
 

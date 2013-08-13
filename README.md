@@ -23,4 +23,15 @@ Usage
 `:AeroGlassDisable`
 
 ### Toggle
+
 `:AeroGlassToggle`
+
+Options
+-------
+
+### Auto Start
+
+Enable Aero Glass effect after starting the GUI.
+
+`let g:aeroglass_auto_start = 1`
+
