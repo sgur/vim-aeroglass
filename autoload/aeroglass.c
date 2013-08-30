@@ -1,5 +1,3 @@
-/* compile: cl /MD /LD aeroglass.c user32.lib gdi32.lib */
-
 #include <windows.h>
 #include <dwmapi.h>
 
