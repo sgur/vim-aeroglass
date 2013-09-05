@@ -23,7 +23,8 @@
 " }}}
 "=============================================================================
 
-if exists('g:loaded_aeroglass') && g:loaded_aeroglass && !(has('win32') || has('win64'))
+if (exists('g:loaded_aeroglass') && g:loaded_aeroglass) || !has('win32')
+      \ || !has('gui_running')
   finish
 endif
 let g:loaded_aeroglass = 1
