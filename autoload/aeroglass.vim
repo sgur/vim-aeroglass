@@ -44,9 +44,13 @@ function! aeroglass#disable()
 endfunction
 
 function! aeroglass#toggle()
+  call aeroglass#{s:aeroglass_state ? 'disable' : 'enable'}()
+endfunction
+
+function! aeroglass#refresh()
   if s:aeroglass_state
-    call aeroglass#disable()
-  else
     call aeroglass#enable()
   endif
 endfunction
+
+autocmd aeroglass_plugin FocusGained *  call aeroglass#refresh()

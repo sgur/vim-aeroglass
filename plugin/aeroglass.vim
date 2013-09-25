@@ -23,8 +23,7 @@
 " }}}
 "=============================================================================
 
-if (exists('g:loaded_aeroglass') && g:loaded_aeroglass) || !has('win32')
-      \ || !has('gui_running')
+if (exists('g:loaded_aeroglass') && g:loaded_aeroglass) || !has('win32') || !has('gui_running')
   finish
 endif
 let g:loaded_aeroglass = 1
@@ -35,10 +34,10 @@ command! -nargs=0 -bar AeroGlassEnable  call aeroglass#enable()
 command! -nargs=0 -bar AeroGlassDisable  call aeroglass#disable()
 command! -nargs=0 -bar AeroGlassToggle  call aeroglass#toggle()
 
-if g:aeroglass_auto_start
-  augroup aeroglass_auto_start
-    autocmd!
-    autocmd GuiEnter *  AeroGlassEnable
-  augroup END
-endif
+augroup aeroglass_plugin
+  autocmd!
+  if g:aeroglass_auto_start
+    autocmd GuiEnter *  call aeroglass#enable()
+  endif
+augroup END
 
