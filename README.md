@@ -3,6 +3,11 @@ vim-aeroglass
 
 Aero Glass feature for GVim
 
+Screenshot
+----------
+
+![](http://media.tumblr.com/30f6153a6221d47bc52111d0ae9ff081/tumblr_inline_mueorzOI5w1qz58bw.png)
+
 Requirements
 ------------
 
